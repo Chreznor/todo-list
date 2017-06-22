@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TODO List</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin|Patrick+Hand+SC" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="todo-container">
+        <h1>Todo List</h1>
+
+        <div>
+          <button onclick="handlers.addTodoTextInput()">Add</button>
+          <input id="addTodoTextInput" type="text">
+        </div>
+        
+        <ul>
+        </ul>
+        
+        <div class="container-bottom">
+        <div>
+          <button id="changeTodoButton" onclick="handlers.changeTodo()">Change Todo</button>
+          <input id="changeTodoPositionInput" type="number">
+          New Text:
+          <input id="changeTodoTextInput" type="text"> 
+        </div>
+
+        <div>
+          <button onclick="handlers.toggleAll()">Toggle All</button>
+          <button onclick="handlers.toggleCompleted()">Toggle todo</button>
+          <input id="toggleCompletedPositionInput" type="number">
+        </div>
+        </div>
+    
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+
+</html>
