@@ -4,8 +4,9 @@ function runDebugger(theFunction) {
 }
 
 
+
 var todoList = {
-  todos: [],
+  todos: JSON.parse(localStorage.getItem('todos')) || [],
   // displayTodos: function() {
   //   if(this.todos.length === 0) {
   //     console.log('This todo list is empty');
@@ -119,6 +120,7 @@ var view = {
         todoLi.textContent = todoTextWithCompletion;
         todoLi.appendChild(this.createDeleteButton());
         todoUl.appendChild(todoLi);
+        localStorage.setItem('todos', JSON.stringify(todoList.todos));
         
       }
     },
@@ -139,4 +141,5 @@ var view = {
     }
 };
 
+view.displayTodos();
 view.eventListeners();
